@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
+module.exports = {
+  images: {
+    domains: ['upload.wikimedia.org', "1000logos.net", "cdn.sanity.io"],
+  },
 }
-
-module.exports = nextConfig
