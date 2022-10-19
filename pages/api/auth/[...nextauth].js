@@ -9,15 +9,10 @@ export const authOptions = {
     }),
     // ...add more providers here
   ],
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: "/auth/signin",
   },
-  // If you dont have custom page... style with this...
-  // theme: {
-  //   logo: "https://links.papareact.com/sq0",
-  //   brandColor: "#F13287",
-  //   colorScheme: "auto",
-  // },
   callbacks: {
     async session({ session, token, user }) {
       session.user.username = session.user.name
